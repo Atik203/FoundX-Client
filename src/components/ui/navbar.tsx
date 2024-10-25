@@ -13,7 +13,7 @@ import clsx from "clsx";
 import NextLink from "next/link";
 
 import { Logo } from "@/src/components/icons";
-import { ThemeSwitch } from "@/src/components/theme-switch";
+import { ThemeSwitch } from "@/src/components/ui/theme-switch";
 import { siteConfig } from "@/src/config/site";
 
 export const Navbar = () => {
