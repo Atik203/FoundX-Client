@@ -1,7 +1,7 @@
 const Page = () => {
   return (
     <div>
-      <h1>This is Page component</h1>
+      <h1>This is Found Items page</h1>
     </div>
   );
 };
