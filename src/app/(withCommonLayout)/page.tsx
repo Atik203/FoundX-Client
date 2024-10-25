@@ -1,7 +1,11 @@
+import Landing from "@/src/components/modules/home/Landing";
+import RecentPost from "@/src/components/modules/home/RecentPost";
+
 export default function Home() {
   return (
     <div>
-      <h1>Home</h1>
+      <Landing />
+      <RecentPost />
     </div>
   );
 }
