@@ -1,5 +1,7 @@
 import getRecentPosts from "@/src/services/RecentPosts";
+import { IPost } from "@/src/types";
 import Link from "next/link";
+import Card from "../../ui/Card";
 import Container from "../../ui/Container";
 
 const RecentPost = async () => {
@@ -16,23 +18,8 @@ const RecentPost = async () => {
         Check out our latest posts below:
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {posts.map((post) => (
-          <div
-            key={post._id}
-            className="bg-white dark:bg-gray-800 rounded-lg p-4"
-          >
-            <h2 className="text-lg font-semibold dark:text-white">
-              {post.title}
-            </h2>
-            <p className="text-gray-600 dark:text-gray-300">
-              {post.description}
-            </p>
-            <Link href={`/found-items/${post._id}`}>
-              <p className="text-blue-500 dark:text-blue-400 hover:underline">
-                Read More
-              </p>
-            </Link>
-          </div>
+        {posts.map((post: IPost) => (
+          <Card key={post._id} post={post} />
         ))}
       </div>
       <div className="flex justify-center mt-6">
