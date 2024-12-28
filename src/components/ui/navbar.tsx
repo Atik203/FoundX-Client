@@ -15,6 +15,7 @@ import NextLink from "next/link";
 import { Logo } from "@/src/components/icons";
 import { ThemeSwitch } from "@/src/components/ui/theme-switch";
 import { siteConfig } from "@/src/config/site";
+import NavbarDropdown from "./NavbarDropdown";
 
 export const Navbar = () => {
   return (
@@ -50,6 +51,9 @@ export const Navbar = () => {
       >
         <NavbarItem className="hidden sm:flex gap-2">
           <ThemeSwitch />
+        </NavbarItem>
+        <NavbarItem className="hidden sm:flex gap-2">
+          <NavbarDropdown />
         </NavbarItem>
       </NavbarContent>
 
